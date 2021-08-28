@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1395250192}
   - component: {fileID: 1395250193}
   - component: {fileID: 1395250194}
+  - component: {fileID: 3102589586705887715}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -171,10 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae7f65b1bc38ad44bf63d864ee1ede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 7363879919314549906, guid: 30792413dc5395c41ac2753c4f39d447, type: 3}
+  projectile: {fileID: 7720098936140546693, guid: 4b55affc1676620479b85261212e223f, type: 3}
   keyToPressToShoot: 106
   ProjectileSpawnPoint: {fileID: 427112753}
-  shootWaitTime: 0
+  shootWaitTime: 0.2
   isEnemy: 0
 --- !u!114 &1395250191
 MonoBehaviour:
@@ -183,15 +184,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478278555907089513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae7f65b1bc38ad44bf63d864ee1ede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4097831880723862230, guid: e29a6ca729165f943bccdf86c1b84b1a, type: 3}
+  projectile: {fileID: 7363879919314549906, guid: 30792413dc5395c41ac2753c4f39d447, type: 3}
   keyToPressToShoot: 112
   ProjectileSpawnPoint: {fileID: 427112753}
-  shootWaitTime: 0
+  shootWaitTime: 0.4
   isEnemy: 0
 --- !u!114 &1395250192
 MonoBehaviour:
@@ -200,15 +201,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478278555907089513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae7f65b1bc38ad44bf63d864ee1ede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 3234716975836000175, guid: 91695b06cd3a7c849a16c9168ee7d51e, type: 3}
+  projectile: {fileID: 2459425115841623253, guid: ead69ddfed742944a90c8d668b7d988b, type: 3}
   keyToPressToShoot: 111
   ProjectileSpawnPoint: {fileID: 427112753}
-  shootWaitTime: 0
+  shootWaitTime: 0.4
   isEnemy: 0
 --- !u!114 &1395250193
 MonoBehaviour:
@@ -217,15 +218,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478278555907089513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae7f65b1bc38ad44bf63d864ee1ede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 7720098936140546693, guid: 4b55affc1676620479b85261212e223f, type: 3}
+  projectile: {fileID: 3234716975836000175, guid: 91695b06cd3a7c849a16c9168ee7d51e, type: 3}
   keyToPressToShoot: 108
   ProjectileSpawnPoint: {fileID: 427112753}
-  shootWaitTime: 0
+  shootWaitTime: 1
   isEnemy: 0
 --- !u!114 &1395250194
 MonoBehaviour:
@@ -234,16 +235,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478278555907089513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ae7f65b1bc38ad44bf63d864ee1ede5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 2459425115841623253, guid: ead69ddfed742944a90c8d668b7d988b, type: 3}
+  projectile: {fileID: 4097831880723862230, guid: e29a6ca729165f943bccdf86c1b84b1a, type: 3}
   keyToPressToShoot: 107
   ProjectileSpawnPoint: {fileID: 427112753}
-  shootWaitTime: 0
+  shootWaitTime: 2
   isEnemy: 0
+--- !u!114 &3102589586705887715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478278555907089513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8710ca3ecf8b8db4e914ee40c57e46fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 1395250191}
+  - {fileID: 1395250192}
+  - {fileID: 1395250193}
+  - {fileID: 1395250194}
 --- !u!1 &7273263338313935507
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +331,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 520659499
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c0925c40d16669249b07548781c7f70f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -396,7 +414,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 520659499
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7520b6b8a4b86ac4090b3f6e1c9159aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -536,9 +554,11 @@ GameObject:
   - component: {fileID: 7273263339918152951}
   - component: {fileID: 7273263339918152944}
   - component: {fileID: 7273263339918152945}
+  - component: {fileID: 563698475149974439}
+  - component: {fileID: 3518909543629502070}
   m_Layer: 9
   m_Name: Player Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,7 +612,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -652,6 +672,34 @@ MonoBehaviour:
   - {fileID: 7362814710907239683}
   - {fileID: 7362814710999751748}
   enginePower: 3
+--- !u!114 &563698475149974439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273263339918152948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6402eff60cd0364ab531de0d2002f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 100
+  playerDamageFX: {fileID: 1929564232946276, guid: ad5d54c9542814801ab5b2860b43e093, type: 3}
+  playerExplosionFX: {fileID: 1493211344075380, guid: d050d6f0895e64926bcad437c907f1a4, type: 3}
+--- !u!114 &3518909543629502070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273263339918152948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c00894b7185ada4cabe0ac5750c2066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponUpgrade: {fileID: 3102589586705887715}
 --- !u!1 &7273263340026893303
 GameObject:
   m_ObjectHideFlags: 0
